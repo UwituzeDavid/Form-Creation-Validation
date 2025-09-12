@@ -35,16 +35,17 @@ document.addEventListener("DOMContentLoaded", () => {
       }
   
       // Step 8: Display feedback
+      
       feedbackDiv.style.display = "block";
-  
+
       if (isValid) {
         feedbackDiv.textContent = "Registration successful!";
-        feedbackDiv.style.color = "#28a745"; // Green
-        feedbackDiv.style.backgroundColor = "#d4edda";
+        feedbackDiv.style.color = "#28a745"; // ✅ Success green
+        feedbackDiv.style.backgroundColor = "#d4edda"; // Optional success background
       } else {
         feedbackDiv.innerHTML = messages.join("<br>");
-        feedbackDiv.style.color = "#d8000c"; // Red
-        feedbackDiv.style.backgroundColor = "#ffbaba";
+        feedbackDiv.style.color = "#dc3545"; // ✅ Error red (required)
+        feedbackDiv.style.backgroundColor = "#ffbaba"; // Optional error background
       }
     });
   });
